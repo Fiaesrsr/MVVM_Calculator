@@ -7,17 +7,30 @@
         mc:Ignorable="d"
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="{Binding Title}"  Height="450" Width="800">
+        Title="{Binding Title}"  Height="450" Width="300">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="MinWidth" Value="50"></Setter>
-            <Setter Property="MaxHeight" Value="40"></Setter>
+            <Setter Property="MinHeight" Value="50"></Setter>
             <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="BorderThickness" Value="2" ></Setter>
+            <Setter Property="BorderBrush" Value="#00ffff"></Setter>
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="#00ffff"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
         <Style TargetType="TextBox">
-            <Setter Property="Height" Value="35" ></Setter>
-            <Setter Property="BorderThickness" Value="1" ></Setter>
-            <Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Height" Value="50" ></Setter>
+            <Setter Property="BorderThickness" Value="2" ></Setter>
+            <Setter Property="BorderBrush" Value="#00ffff"></Setter>
+            <Setter Property="Background" Value="Black"></Setter>
+            <Setter Property="Foreground" Value="#00ffff"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="TextAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+
         </Style>
     </Window.Resources>
 
@@ -25,6 +38,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
 
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -43,24 +57,37 @@
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             
+
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="1"></TextBox>
 
-        <Button Grid.Column="1" Grid.Row="2" Content="7"></Button>
-        <Button Grid.Column="2" Grid.Row="2" Content="8"></Button>
-        <Button Grid.Column="3" Grid.Row="2" Content="9"></Button>
+        <Button Grid.Column="1" Grid.Row="2" Content=""></Button>
+        <Button Grid.Column="2" Grid.Row="2" Content="/"></Button>
+        <Button Grid.Column="3" Grid.Row="2" Content="*"></Button>
+        <Button Grid.Column="4" Grid.Row="2" Content="-"></Button>
 
-        <Button Grid.Column="1" Grid.Row="3" Content="4"></Button>
-        <Button Grid.Column="2" Grid.Row="3" Content="5"></Button>
-        <Button Grid.Column="3" Grid.Row="3" Content="6"></Button>
+        <Button Grid.Column="1" Grid.Row="3" Content="7"></Button>
+        <Button Grid.Column="2" Grid.Row="3" Content="8"></Button>
+        <Button Grid.Column="3" Grid.Row="3" Content="9"></Button>
+        <Button Grid.RowSpan="2" Grid.Column="4" Grid.Row="3" Content="+"></Button>
+
+
+        <Button Grid.Column="1" Grid.Row="4" Content="4"></Button>
+        <Button Grid.Column="2" Grid.Row="4" Content="5"></Button>
+        <Button Grid.Column="3" Grid.Row="4" Content="6"></Button>
         
-        <Button Grid.Column="1" Grid.Row="4" Content="1"></Button>
-        <Button Grid.Column="2" Grid.Row="4" Content="2"></Button>
-        <Button Grid.Column="3" Grid.Row="4" Content="3"></Button>
 
-        <Button Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="5" Content="0"></Button>
-        <Button Grid.Column="3" Grid.Row="5" Content="."></Button>
+
+        <Button Grid.Column="1" Grid.Row="5" Content="1"></Button>
+        <Button Grid.Column="2" Grid.Row="5" Content="2"></Button>
+        <Button Grid.Column="3" Grid.Row="5" Content="3"></Button>
+        <Button Grid.RowSpan="2" Grid.Column="4" Grid.Row="5" Content="="></Button>
+        
+
+
+        <Button Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="6" Content="0"></Button>
+        <Button Grid.Column="3" Grid.Row="6" Content="."></Button>
         
 
     </Grid>
