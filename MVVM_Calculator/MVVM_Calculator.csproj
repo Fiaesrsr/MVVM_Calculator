@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="ExtensionMethods\Example_ExtensionMethod.cs" />
     <Compile Include="Models\Example_Model.cs" />
+    <Compile Include="ViewModels\Bases\ViewModelBase.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>

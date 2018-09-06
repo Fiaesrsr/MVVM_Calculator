@@ -10,6 +10,8 @@
         Title="{Binding Title}"  Height="450" Width="300">
     <Window.Resources>
         <Style TargetType="Button">
+            <Setter Property="Command" Value="{Binding AddNumberCommand}"></Setter>
+            <Setter Property="CommandParameter" Value="{Binding Content, RelativeSource={RelativeSource Self}}"></Setter>
             <Setter Property="MinWidth" Value="50"></Setter>
             <Setter Property="MinHeight" Value="50"></Setter>
             <Setter Property="Margin" Value="5"></Setter>
@@ -60,7 +62,7 @@
 
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBox Text="{Binding CalculatorText}" Grid.ColumnSpan="4" Grid.Column="1" Grid.Row="1"></TextBox>
 
         <Button Grid.Column="1" Grid.Row="2" Content=""></Button>
         <Button Grid.Column="2" Grid.Row="2" Content="/"></Button>
